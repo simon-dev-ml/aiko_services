@@ -1197,6 +1197,7 @@ class PipelineImpl(Pipeline):
 
         finally:
         # If not _WINDOWS, then always remove the cached Stream Frame
+            breakpoint()
             if not _WINDOWS and stream.frame_id in stream.frames:
                 del stream.frames[stream.frame_id]
             if frame_complete and stream.frame_id in stream.frames:
